@@ -1,0 +1,24 @@
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Dima's mail(Dima@gmail.com) has been removed from mailing list.
+Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
+Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
+Anton's mail(anton@gmail.com) has been removed from mailing list.
+Anton's mail(anton@gmail.com) has been removed from mailing list.
+Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
+Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
+User Anton has been removed from list of roles.
+Anton's mail(anton@gmail.com) has been removed from mailing list.
+Serg's mail(Serg@gmail.com) has been removed from mailing list.
+Anton's mail(anton@gmail.com) has been removed from mailing list.
+Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
+Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
+User Dima has been removed from list of roles.
+User Serg has been removed from list of roles.
+User Anton has been removed from list of roles.
+User Andrei has been removed from list of roles.

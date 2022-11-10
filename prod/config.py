@@ -1,3 +1,3 @@
-server_ip = '192.168.64.2'
-user_dn = 'cn=admin,dc=name,dc=com'
-password = '300886'
+server_ip = '10.1.2.191'
+user_dn = 'cn=Manager,dc=rightandabove,dc=com,dc=domains'
+password = 'admin'

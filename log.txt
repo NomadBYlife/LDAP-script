@@ -1,24 +1,131 @@
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Dima's mail(Dima@gmail.com) has been removed from mailing list.
-Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
-Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
-Anton's mail(anton@gmail.com) has been removed from mailing list.
-Anton's mail(anton@gmail.com) has been removed from mailing list.
-Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
-Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
-User Anton has been removed from list of roles.
-Anton's mail(anton@gmail.com) has been removed from mailing list.
-Serg's mail(Serg@gmail.com) has been removed from mailing list.
-Anton's mail(anton@gmail.com) has been removed from mailing list.
-Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
-Andrei's mail(['Andrei@gmail.com', 'Andrei2@gmail.com']) has been removed from mailing list.
-User Dima has been removed from list of roles.
-User Serg has been removed from list of roles.
-User Anton has been removed from list of roles.
-User Andrei has been removed from list of roles.
+-> cn=accounts.payable@rightandabove.com
+  | ---> cn=accounts.receivable@rightandabove.com
+  | ---> cn=appleid1@rightandabove.com
+  | ---> cn=appleid2@rightandabove.com
+  | ---> cn=appleid3@rightandabove.com
+  | ---> cn=aspass@rightandabove.com
+  | ---> cn=atlassian-support-list@rightandabove.com
+  | ---> cn=autotest-rep@rightandabove.com
+  | ---> cn=banking-and-government@rightandabove.com
+  | ---> cn=banking.payoneer@rightandabove.com
+  | ---> cn=banking.pingpongx@rightandabove.com
+  | ---> cn=banking.remitly@rightandabove.com
+  | ---> cn=banking.wise@rightandabove.com
+  | ---> cn=bitrix@rightandabove.com
+  | ---> cn=bizdev.dnb@rightandabove.com
+  | ---> cn=bizdev@rightandabove.com
+  | ---> cn=brocade@rightandabove.com
+  | ---> cn=ca@rightandabove.com
+  | ---> cn=cf@rightandabove.com
+  | ---> cn=confluence@rightandabove.com
+  | ---> cn=contact@rightandabove.com
+  | ---> cn=contracts@rightandabove.com
+  | ---> cn=cv@rightandabove.com
+  | ---> cn=design-tools-list@rightandabove.com
+  | ---> cn=dns.admins@rightandabove.com
+  | ---> cn=dns.managers@rightandabove.com
+  | ---> cn=docker-id@rightandabove.com
+  | ---> cn=dsewebnet.raa.admin@rightandabove.com
+  | ---> cn=dynamics@rightandabove.com
+  | ---> cn=ekm-reports@rightandabove.com
+  | ---> cn=elements-envato@rightandabove.com
+  | ---> cn=enterprise@rightandabove.com
+  | ---> cn=ext-contractors@rightandabove.com
+  | ---> cn=fax.17037603701@rightandabove.com
+  | ---> cn=fax.17037769027@rightandabove.com
+  | ---> cn=funseek-notify@rightandabove.com
+  | ---> cn=info@rightandabove.com
+  | ---> cn=insuranceriskservices-access@rightandabove.com
+  | ---> cn=internship_career@rightandabove.com
+  | ---> cn=ios-dev-01@rightandabove.com
+  | ---> cn=ip@rightandabove.com
+  | ---> cn=itrecruiting@rightandabove.com
+  | ---> cn=joinme1@rightandabove.com
+  | ---> cn=kiev.personnel.list@rightandabove.com
+  | ---> cn=krr.mens.list@rightandabove.com
+  | ---> cn=krr.personnel.list@rightandabove.com
+  | ---> cn=krr.talks.list@rightandabove.com
+  | ---> cn=list212@rightandabove.com
+  | ---> cn=marketing@rightandabove.com
+  | ---> cn=microsoft-licensing@rightandabove.com
+  | ---> cn=ms-teams-01@rightandabove.com
+  | ---> cn=ms-teams-02@rightandabove.com
+  | ---> cn=official@rightandabove.com
+  | ---> cn=oss@rightandabove.com
+  | ---> cn=paypal@rightandabove.com
+  | ---> cn=personnel.list@rightandabove.com
+  | ---> cn=postal@rightandabove.com
+  | ---> cn=raa-skype-2@rightandabove.com
+  | ---> cn=raa-skype-creator@rightandabove.com
+  | ---> cn=raa.sup.code@rightandabove.com
+  | ---> cn=recruiting-intern@rightandabove.com
+  | ---> cn=recruiting@rightandabove.com
+  | ---> cn=resumes.in@rightandabove.com
+  | ---> cn=skype-voice-1@rightandabove.com
+  | ---> cn=skype.andrey.forostovsky.corp@rightandabove.com
+  | ---> cn=sms.17037603700@rightandabove.com
+  | ---> cn=sms.17037603702@rightandabove.com
+  | ---> cn=sms.17037603703@rightandabove.com
+  | ---> cn=software-and-licenses2@rightandabove.com
+  | ---> cn=software-and-licenses@rightandabove.com
+  | ---> cn=sparling.admin@rightandabove.com
+  | ---> cn=srv-ups-ua@rightandabove.com
+  | ---> cn=system-notify@rightandabove.com
+  | ---> cn=testlist@rightandabove.com
+  | ---> cn=ttcandidates@rightandabove.com
+  | ---> cn=twilio@rightandabove.com
+  | ---> cn=twitter@rightandabove.com
+  | ---> cn=usmd01-appl@rightandabove.com
+  | ---> cn=vasyl@rightandabove.com
+  | ---> cn=viber@rightandabove.com
+  | ---> cn=voip-providers@rightandabove.com
+  | ---> cn=vr-vm-3703@rightandabove.com
+  | ---> cn=webex-100-1@rightandabove.com
+  | ---> cn=webex-1@rightandabove.com
+  | ---> cn=webex-25-1@rightandabove.com
+  | ---> cn=webex-2@rightandabove.com
+  | ---> cn=wendell.august.support@rightandabove.com
+  | ---> cn=wrike-1@rightandabove.com
+  | ---> cn=yulia@rightandabove.com
+  | ---> cn=zoom-1@rightandabove.com
+  | ---> cn=zoom-2@rightandabove.com
+  | ---> cn=zoom-3@rightandabove.com
+  | ---> cn=zoom-4@rightandabove.com
+  -> cn=abuse@rightandabove.com
+  | | ---> cn=admin@rightandabove.com
+  | | ---> cn=alex-github@rightandabove.com
+  | | ---> cn=appleit@rightandabove.com
+  | | ---> cn=aws-1@rightandabove.com
+  | | ---> cn=azure@rightandabove.com
+  | | ---> cn=backup.manager@rightandabove.com
+  | | ---> cn=bdswiss@rightandabove.com
+  | | ---> cn=DigitalOcean@rightandabove.com
+  | | ---> cn=dmarc-report@rightandabove.com
+  | | ---> cn=dropbox@rightandabove.com
+  | | ---> cn=gmail.corp@rightandabove.com
+  | | ---> cn=gmail@rightandabove.com
+  | | ---> cn=hosting-admins@rightandabove.com
+  | | ---> cn=hphw@rightandabove.com
+  | | ---> cn=ids-alerts@rightandabove.com
+  | | ---> cn=isymphony@rightandabove.com
+  | | ---> cn=itsupport@rightandabove.com
+  | | ---> cn=jenkins@rightandabove.com
+  | | ---> cn=noc@rightandabove.com
+  | | ---> cn=org-github-01@rightandabove.com
+  | | ---> cn=ostickets-noreply@rightandabove.com
+  | | ---> cn=rbl-admin@rightandabove.com
+  | | ---> cn=siasakina.fwd-issues@rightandabove.com
+  | | ---> cn=siasakina.issues@rightandabove.com
+  | | ---> cn=siasakina.support@rightandabove.com
+  | | ---> cn=slacktest@rightandabove.com
+  | | ---> cn=startssl@rightandabove.com
+  | | ---> cn=support-zoomus@rightandabove.com
+  | | ---> cn=support.klarpay@rightandabove.com
+  | | ---> cn=support.plwaw01@rightandabove.com
+  | | ---> cn=support.unifi.global@rightandabove.com
+  | | ---> cn=support@rightandabove.com
+  | | ---> cn=system-aliases@rightandabove.com
+  | | ---> cn=tp-admins@rightandabove.com
+  | | ---> cn=turtlshell.support@rightandabove.com
+  | | ---> cn=webmaster@rightandabove.com
+  | | ---> cn=wlist-request@rightandabove.com

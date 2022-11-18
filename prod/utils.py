@@ -1,5 +1,5 @@
 from ldap3 import Server, Connection, ALL, SUBTREE
-from ldap3.core.exceptions import LDAPException, LDAPExceptionError
+from ldap3.core.exceptions import LDAPExceptionError
 from config import server_ip, user_dn, password
 import logging
 from logging import handlers
@@ -35,7 +35,7 @@ def connect_ldap_server():
                                 password=password)
 
         connection.bind()
-        if connection.bound == False:
+        if not connection.bound:
             raise LDAPExceptionError('Server connection not established')
         else:
             return connection
@@ -43,7 +43,7 @@ def connect_ldap_server():
         logger.error(e)
 
 
-def get_groups_of_EX(search_base):
+def get_groups_of_ex(search_base):
     """get all EX-* groups"""
     search_filter = '(ou=Ex*)'
     ldap_conn = connect_ldap_server()
@@ -61,31 +61,12 @@ def get_groups_of_EX(search_base):
         logger.error(e)
 
 
-def get_ex_users_for_mailing(search_base):
+def get_ex_users(search_base):
     """Get email all of exUsers without mark about removal from mailing lists"""
     # search_filter = '(&(uid=*)(!(description=[SYS] deleted from mailing:*)))'
     search_filter = '(uid=*)'
     ldap_conn = connect_ldap_server()
     mail_list = []
-    for dn in search_base:
-        try:
-            ldap_conn.search(search_base=dn,
-                             search_filter=search_filter,
-                             search_scope=SUBTREE,
-                             attributes=['uid', 'mail', 'description'])
-            result = ldap_conn.entries
-            for res in result:
-                mail_list.append(res.mail)
-        except Exception as e:
-            logger.error(e)
-    return mail_list
-
-
-def get_users_for_roles(search_base):
-    """Get DN all of exUsers without mark about removal from roles"""
-    # search_filter = '(&(uid=*)(!(description=[SYS] deleted from role:*)))'
-    search_filter = '(uid=*)'
-    ldap_conn = connect_ldap_server()
     dn_list = []
     for dn in search_base:
         try:
@@ -95,10 +76,32 @@ def get_users_for_roles(search_base):
                              attributes=['uid', 'mail', 'description'])
             result = ldap_conn.entries
             for res in result:
+                mail_list.append(res.mail)
                 dn_list.append(res.entry_dn)
+
         except Exception as e:
             logger.error(e)
-    return dn_list
+    return mail_list, dn_list
+
+
+# def get_users_for_roles(search_base):
+#     """Get DN all of exUsers without mark about removal from roles"""
+#     # search_filter = '(&(uid=*)(!(description=[SYS] deleted from role:*)))'
+#     search_filter = '(uid=*)'
+#     ldap_conn = connect_ldap_server()
+#     dn_list = []
+#     for dn in search_base:
+#         try:
+#             ldap_conn.search(search_base=dn,
+#                              search_filter=search_filter,
+#                              search_scope=SUBTREE,
+#                              attributes=['uid', 'mail', 'description'])
+#             result = ldap_conn.entries
+#             for res in result:
+#                 dn_list.append(res.entry_dn)
+#         except Exception as e:
+#             logger.error(e)
+#     return dn_list
 
 
 def get_user_mail(dn):

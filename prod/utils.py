@@ -1,6 +1,28 @@
 from ldap3 import Server, Connection, ALL, SUBTREE
 from ldap3.core.exceptions import LDAPException, LDAPExceptionError
 from config import server_ip, user_dn, password
+import logging
+from logging import handlers
+
+def init_logger(name):
+    logger = logging.getLogger(name)
+    FORMAT = "%(asctime)s - %(name)s:%(funcName)s:%(lineno)s - %(levelname)s - %(message)s"
+    logger.setLevel(logging.DEBUG)
+    sh = logging.StreamHandler()
+    sh.setFormatter(logging.Formatter(FORMAT))
+    sh.setLevel(logging.INFO)
+
+    # maximum file size 100MB (104857600 bytes), count = 3
+    fh = logging.handlers.RotatingFileHandler(filename='log_main', maxBytes=104857600, backupCount=3)
+    fh.setFormatter(logging.Formatter(FORMAT))
+    fh.setLevel(logging.DEBUG)
+    logger.addHandler(sh)
+    logger.addHandler(fh)
+    # logger.debug('logger was initialized')
+
+
+init_logger('main')
+logger = logging.getLogger('main.utils')
 
 
 def connect_ldap_server():
@@ -13,9 +35,12 @@ def connect_ldap_server():
                                 password=password)
 
         connection.bind()
-        return connection
+        if connection.bound == False:
+            raise LDAPExceptionError('Server connection not established')
+        else:
+            return connection
     except LDAPExceptionError as e:
-        return (e)
+        logger.error(e)
 
 
 def get_groups_of_EX(search_base):
@@ -32,13 +57,14 @@ def get_groups_of_EX(search_base):
         for res in results:
             result.append(res.entry_dn)
         return result
-    except LDAPException as e:
-        return e
+    except Exception as e:
+        logger.error(e)
 
 
 def get_ex_users_for_mailing(search_base):
     """Get email all of exUsers without mark about removal from mailing lists"""
-    search_filter = '(&(uid=*)(!(description=[SYS] deleted from mailing list)))'
+    # search_filter = '(&(uid=*)(!(description=[SYS] deleted from mailing:*)))'
+    search_filter = '(uid=*)'
     ldap_conn = connect_ldap_server()
     mail_list = []
     for dn in search_base:
@@ -50,14 +76,15 @@ def get_ex_users_for_mailing(search_base):
             result = ldap_conn.entries
             for res in result:
                 mail_list.append(res.mail)
-        except LDAPException as e:
-            return e
+        except Exception as e:
+            logger.error(e)
     return mail_list
 
 
 def get_users_for_roles(search_base):
     """Get DN all of exUsers without mark about removal from roles"""
-    search_filter = '(&(uid=*)(!(description=[SYS] deleted from roles list)))'
+    # search_filter = '(&(uid=*)(!(description=[SYS] deleted from role:*)))'
+    search_filter = '(uid=*)'
     ldap_conn = connect_ldap_server()
     dn_list = []
     for dn in search_base:
@@ -69,8 +96,8 @@ def get_users_for_roles(search_base):
             result = ldap_conn.entries
             for res in result:
                 dn_list.append(res.entry_dn)
-        except LDAPException as e:
-            return e
+        except Exception as e:
+            logger.error(e)
     return dn_list
 
 
@@ -86,8 +113,8 @@ def get_user_mail(dn):
         result = ldap_conn.entries[0].mail
 
         return result
-    except LDAPException as e:
-        return e
+    except Exception as e:
+        logger.error(e)
 
 
 def get_dn_of_mailing_lists():
@@ -114,9 +141,10 @@ def get_dn_of_mailing_lists():
                 for a in row.value:
                     mails.append(a)
         mails = list(set(mails))
+        # print(mails)
         return mails, dn
-    except LDAPException as e:
-        return e
+    except Exception as e:
+        logger.error(e)
 
 
 def get_unique_member_list():
@@ -137,5 +165,5 @@ def get_unique_member_list():
                 uniq_members.append(q)
         uniq_members = list(set(uniq_members))
         return uniq_members, roles_dn
-    except LDAPException as e:
-        return e
+    except Exception as e:
+        logger.error(e)

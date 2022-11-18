@@ -1,6 +1,8 @@
 log.txt
 examples/
 prod/*.txt
+Prod.tgz
+
 
 
 # Byte-compiled / optimized / DLL files
